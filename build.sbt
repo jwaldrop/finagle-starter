@@ -1,6 +1,4 @@
-resolvers += "yunrang-repo" at "http://dev.yunrang.com/nexus/content/groups/publics/"
-
-resolvers += "twitter-repo" at "http://maven.twttr.com/"
+resolvers += "yunrang-repo" at "http://dev.yunrang.com/nexus/content/groups/public2"
 
 publishTo <<= (version) { version: String =>
   val nexus = "http://dev.yunrang.com/nexus/content/repositories/"
@@ -12,7 +10,7 @@ seq(com.twitter.sbt.CompileThriftFinagle.newSettings: _*)
 
 ///////////////////////////////////////////////////////////////////////////////
 libraryDependencies ++= Seq(
-  "com.twitter" %% "finagle" %  "3.0.0"
+  "com.twitter" %% "finagle" % "3.0.0"
 )
 
 ///////////////////////////////////////////////////////////////////////////////
