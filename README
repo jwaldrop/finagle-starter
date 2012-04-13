@@ -1,0 +1,15 @@
+Steps to run program:
+
+0) Start up Zookeeper on localhost, I used:
+  http://apache.ziply.com/zookeeper/zookeeper-3.4.3/
+  after downloading you must copy the sample conf file locally or it won't start
+  startup scripts are in the bin directory
+  other than the conf file, it starts up with no problem
+
+1) chmod +x bin/sbt
+
+2) In a shell: ./bin/sbt run  -- pick number 1 (the server)
+   (note: port 1233 must be available)
+
+3) In another shell: ./bin/sbt run -- pick number 2 (the client)
+

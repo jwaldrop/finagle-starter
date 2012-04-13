@@ -1,10 +1,4 @@
-resolvers += "yunrang-repo" at "http://dev.yunrang.com/nexus/content/groups/public2"
-
-publishTo <<= (version) { version: String =>
-  val nexus = "http://dev.yunrang.com/nexus/content/repositories/"
-  if (version.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "snapshots/") 
-  else                                   Some("releases"  at nexus + "releases/")
-}
+resolvers += "twitter repo" at "http://maven.twttr.com"
 
 seq(com.twitter.sbt.CompileThriftFinagle.newSettings: _*)
 

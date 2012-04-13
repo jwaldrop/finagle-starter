@@ -13,7 +13,7 @@ import scala.collection.JavaConversions._
 import java.net.{InetAddress, NetworkInterface, InetSocketAddress}
 
 class ClusterHelper {
-  val addr = new InetSocketAddress("192.168.1.252", 2181)
+  val addr = new InetSocketAddress("127.0.0.1", 2181)
   val zookeeperClient: ZooKeeperClient = new ZooKeeperClient(Amount.of(4000, Time.MILLISECONDS), addr)
   val serverSet = new ServerSetImpl(zookeeperClient, "/dong/echo/")
   val cluster = new ZookeeperServerSetCluster(serverSet)
